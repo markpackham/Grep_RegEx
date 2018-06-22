@@ -27,6 +27,9 @@ grep -vi doNotLookForMe myFile
 //Show the filenames of the files that contain a word,  you don't care about the contents
 grep -l theWordYouAreLookingFor *
 
+//Show files that don't match your search criteria
+grep -L theWordYouAreLookingFor *
+
 //Give us a count of the amount of times something you are looking for is found
 grep -c theWordYouAreLookingFor *
 
@@ -41,6 +44,9 @@ grep "Space space space gaps" *
 //Do a search for whole words
 grep -w abcde *
 //would return abcde.this or that.abcde but not abcdefghij
+
+//Do a search for whole lines
+grep -x abcdefsdfsdfdsfsdfsdfsdfsddssd *
 
 //Show full words, ignore case, search recursively & give me a count
 grep -wirc "Some Text" .
@@ -91,3 +97,6 @@ cat myFile | grep myWord
 
 //Output contents of myClass, filter out anything with filterMeOut and reverse sort
 cat myFile | grep -v filterMeOut | sort -r
+
+//Get everything starting with an A, if it is followed by a 'b' then that is optional
+grep -E '^Ab?' Ayes_bOptional.txt

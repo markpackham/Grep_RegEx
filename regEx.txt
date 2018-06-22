@@ -1,0 +1,21 @@
+\ Cancel next character's abilities, \. means litterally \fullstop
+
+[] match any char you insert eg [a,b,c]
+[^] match everything but what's in the [] eg [^doNotMatchMe] won't find the words doNotMatchMe but will find everything else
+[-] match range eg [a-z]
+^ match char begins with
+$ match char ends with
+. match any single char except at the end of the line
+* 0 or any number of chars
++ 1 or more chars
+? optional char that matches at the most once
+{n} matched exactly n number of times eg {10}
+{n,} matched n number of times or more eg {10,}
+{n,m} matched at least n number of times but not more than m eg {10,20}
+{,m} matches at most m number of times eg {,4000000}
+[[:lower:]] lowercase
+[[:upper:]] uppercase
+[[:aphlha:]] alpha
+[[:digit:]] digit
+[[:alnum:]] alphanumeric
+
