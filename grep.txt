@@ -76,3 +76,18 @@ grep "...-...-...." 3_3_4-characters.txt
 //Look for digits such as phone numbers 022-333-4567 (won't work on Macs)
 //You need the -P to make this work
 grep -P "\d{3}-\d{3}-d{4}" 3_3_4-digits.txt
+
+//Show all file names begining with "beginWith" in a specific location
+ls /usr/bin | grep ^beginWith
+
+//Show all file names ending with "endWith" in a specific location
+ls /usr/bin | grep endWith$
+
+//Look for a word that starts with "a", has 3 random words in between & ends with "e"
+grep '^a...e$' apple.txt
+
+//Search the file myFile for the word myWord & show it
+cat myFile | grep myWord
+
+//Output contents of myClass, filter out anything with filterMeOut and reverse sort
+cat myFile | grep -v filterMeOut | sort -r

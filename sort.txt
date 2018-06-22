@@ -1,0 +1,14 @@
+//Output file into terminal
+cat myFile
+
+//sort file alphabetically
+sort myFile
+
+//reverse sort
+sort -r myFile
+
+//sort numerically
+sort -n myFile
+
+//sort case insensative
+sort -f myFile
