@@ -1,0 +1,78 @@
+Grep
+
+//Show grep version
+grep -V
+
+//Locate word in file
+grep myStringToSearchFor myFile
+
+//Locate word in directory focusing only on .txt files
+grep myStringToSearchFor ./*.txt
+
+//Locate word in file line numbers
+grep -n myStringToSearchFor myFile
+
+//Keep searching
+grep mySearchWord *
+
+//Keep searching, ignore case
+grep -i mySearchWord *
+
+//Inverse search, show everything but this
+grep -v doNotLookForMe myFile
+
+//Inverse search, show everything but this, ignore case
+grep -vi doNotLookForMe myFile
+
+//Show the filenames of the files that contain a word,  you don't care about the contents
+grep -l theWordYouAreLookingFor *
+
+//Give us a count of the amount of times something you are looking for is found
+grep -c theWordYouAreLookingFor *
+
+//Do a recursive search (keep digging through sub directories)
+grep -r theWordYouAreLookingFor filesStartingWithTheseWords*
+grep -r theWordYouAreLookingFor a*
+grep -r theWordYouAreLookingFor b*
+
+//Do a search factoring in space between words
+grep "Space space space gaps" *
+
+//Do a search for whole words
+grep -w abcde *
+//would return abcde.this or that.abcde but not abcdefghij
+
+//Show full words, ignore case, search recursively & give me a count
+grep -wirc "Some Text" .
+
+//Only return 3 lines after myStringToSearchFor
+grep -A 3 myStringToSearchFor myFile
+
+//Only return 3 lines before myStringToSearchFor
+grep -B 3 myStringToSearchFor myFile
+
+//Only return 3 lines before & after myStringToSearchFor
+grep -C 3 myStringToSearchFor myFile
+
+//Search for all files that starts with a number
+grep "^[0-9]" *
+
+//Search for files that contain BOTH abc & efg
+grep abc * | grep efg *
+
+//Find a file whose name you don't know in a folder
+//xargs says to grep focus on the file content not the file names
+find . -name *aFolder* | xargs grep FindTheseWords
+
+//Narrow down our history searches, eg just git commits
+history | grep "git commmit"
+
+//Narrow down bash history for specific commits to the file myClass.php
+history | grep "git commmit" | grep "myClass.php"
+
+//Look for anything that is 3-3-4 characters eg "one-two-three"
+grep "...-...-...." 3_3_4-characters.txt
+
+//Look for digits such as phone numbers 022-333-4567 (won't work on Macs)
+//You need the -P to make this work
+grep -P "\d{3}-\d{3}-d{4}" 3_3_4-digits.txt
