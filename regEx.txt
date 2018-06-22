@@ -13,6 +13,7 @@ $ match char ends with
 {n,} matched n number of times or more eg {10,}
 {n,m} matched at least n number of times but not more than m eg {10,20}
 {,m} matches at most m number of times eg {,4000000}
+-F is for fixed strings so . is a regular fullstop, not a single char
 [[:lower:]] lowercase
 [[:upper:]] uppercase
 [[:aphlha:]] alpha

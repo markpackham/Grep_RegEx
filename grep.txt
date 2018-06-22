@@ -6,6 +6,9 @@ grep -V
 //Locate word in file
 grep myStringToSearchFor myFile
 
+//TMake sure that the first character of actual line content lies on a tab stop, so that the alignment of tabs looks normal
+grep -T myStringToSearchFor myFile
+
 //Locate word in directory focusing only on .txt files
 grep myStringToSearchFor ./*.txt
 
@@ -98,5 +101,15 @@ cat myFile | grep myWord
 //Output contents of myClass, filter out anything with filterMeOut and reverse sort
 cat myFile | grep -v filterMeOut | sort -r
 
-//Get everything starting with an A, if it is followed by a 'b' then that is optional
+//Get everything starting with an A, if it is followed by a 'b' then that is optional, -E is an extended regular expression
 grep -E '^Ab?' Ayes_bOptional.txt
+
+//Treat -e as an OR statement if you want to output either Mark or Paul
+grep -e 'Mark' -e 'Paul' names.txt
+//This has the same effect
+grep -E 'Mark|Paul' names.txt
+
+//Use a fixed string so the '.' doesn't have any special powers it is a normal char
+grep -F 'ThisIsAFullstop.NotASpecialChar' literalFullstop.txt
+//This also works using \
+grep 'ThisIsAFullstop\.NotASpecialChar' literalFullstop.txt
