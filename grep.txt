@@ -12,7 +12,10 @@ grep -T myStringToSearchFor myFile
 //Locate word in directory focusing only on .txt files
 grep myStringToSearchFor ./*.txt
 
-//Locate word in file line numbers
+//Locate word in directory focusing only on files starting with "error_log"
+grep "some string thing" ./error_log*
+
+//Locate word in file line numbers USE THIS A LOT!!!!!!!!
 grep -n myStringToSearchFor myFile
 
 //Keep searching
