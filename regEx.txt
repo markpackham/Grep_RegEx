@@ -19,4 +19,6 @@ $ match char ends with
 [[:aphlha:]] alpha
 [[:digit:]] digit
 [[:alnum:]] alphanumeric
-
+\< start of word
+\> end of word
+\b either start or end of word
