@@ -22,3 +22,6 @@ $ match char ends with
 \< start of word
 \> end of word
 \b either start or end of word
+
+
+^.{0,52} grab the first 52 characters on a line (handy expression for deletions)
