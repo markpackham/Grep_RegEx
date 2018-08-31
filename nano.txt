@@ -2,7 +2,7 @@ Open file at specific line number
 nano +20 myFile.txt
 
 Jump to specific line number
-Ctrl _
+Ctrl Shift _
 
 Jump to bottom of file
 Ctrl V
