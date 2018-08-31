@@ -1,0 +1,8 @@
+Show file line numbers
+less -N myFile
+
+Jump to bottom of file
+Shift G
+
+Go to specific line number
+g [line number]

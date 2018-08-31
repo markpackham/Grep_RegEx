@@ -1,0 +1,11 @@
+Open file at specific line number
+nano +20 myFile.txt
+
+Jump to specific line number
+Ctrl _
+
+Jump to bottom of file
+Ctrl V
+
+Jump to top of file
+Ctrl Y
