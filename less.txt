@@ -6,3 +6,6 @@ Shift G
 
 Go to specific line number
 g [line number]
+
+Outside of the file open at the 100th line and show the line numbers
+less +100 -N myFile
